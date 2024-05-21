@@ -3,12 +3,13 @@
     padding: 0;
     font-size: 16px;
     font-family: "Roboto", sans-serif;
+    line-height: 1.6;
 }
 :root {
     --primary-color: #333333; /* Charcoal */
     --secondary-color: #2E8B57; /* Forest Green */
     --accent-color: #0099ff; /* Sky Blue */
-    --highlight-color: #FFFDD0; /* Cream */
+    --highlight-color: #FFFF; 
     --background-color: #D3D3D3; /* Light Gray */
 }
 
@@ -99,7 +100,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
+    color: var(--highlight-color);
 }
 
 /* Video Styles */
@@ -156,33 +157,29 @@ video {
 
 /*About Us*/
 #about-us{
-    padding: 50px 20px;
-    background: #f4f4f4;
+    background-image: url("./assets/campus-347285_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin-top: 2rem;
-    padding-left: 2rem;
+    padding: 2rem;
+    color: var(--highlight-color);
 }
 
 #about-us > div > h2{
     font-size: 40px;
-    color: var(--primary-color);
+    font-weight: 700;
 }
 
 #about-us > div > h3{
     margin-top: 2rem;
     font-size: 30px;
-    color: var(--primary-color);
 }
 #about-us > div > p{
     margin-top: 2rem;
     font-size: 20px;
-    color: var(--primary-color);
 }
 
-.about--img >img{
-    margin-top: 2px;
-    max-width: 300px;
-    max-height: 300px;
-}
 
 
 #about-us > div:nth-of-type(2){
@@ -223,15 +220,18 @@ video {
 
 /*Academics*/
 #academics{
-    margin-top: 8rem;
+    background-color: #212529;
+    text-align: center;
+    margin-top: 2rem;
 }
 
 .academics--info>h1{
-    font-size: 30px;
-    color: var(--primary-color);
+    font-size: 50px;
+    font-weight: 900;
+    color: #ed1b2f;
 }
 .academics--info>p{
-    color: var(--primary-color);
+    color: #a7a9ac;
 }
 .ademics--degree{
     margin-top: 2rem;
@@ -314,6 +314,20 @@ video {
     color: var(--primary-color); 
     padding: 20px;
 }
+
+.clubs--activity{
+    width: 300px;
+}
+.club--img{
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+}
+.club--img>img{
+    width: 100%;
+    height: 100%;
+}
+
 .testimonial--section{
     display: flex;
     justify-content: space-evenly;
@@ -370,4 +384,62 @@ footer a {
 
 footer a:hover {
     color: #FFD700; 
+}
+
+/*Internal*/
+.program--info{
+    text-align: center;
+}
+.program--info > h1{
+    font-weight: 700;
+    font-size: 40px;
+    color: #00243a;
+}
+.program--info > p{
+    font-size: 20px;
+    color: #8d8f91;
+}
+
+.container{
+    padding: 1.5rem;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 2rem;
+
+}
+
+.degree--title{
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #00243a;
+}
+.degree--info{
+    margin-top: 0.5rem;
+    padding: 0.2rem;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #a7a9ac;
+    border-radius: 7px;
+    color: #a7a9ac;
+}
+.degree--img{
+    cursor: pointer;
+    width: 385px;
+    height: 257px;
+}
+.degree--img > img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and  ( max-width:978px ) {
+    .container{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(8,1fr);
+        row-gap: 3rem;
+    
+    }
+    
 }
