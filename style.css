@@ -325,9 +325,9 @@ video {
 }
 
 .apply-section{
+    padding: 1rem;
     background: var(--dark-blue);
     color: var(--highlight-color);
-    height: 300px;
     line-height: 2;
 }
 .apply-section > h3{
@@ -394,10 +394,15 @@ video {
     width: 300px;
     background: #f9f9f9;
     color: var(--dark-blue);
-
+}
+@media screen and  ( max-width:978px ) {
+    .event{
+        flex-direction: column;
+    }
 }
 
 .event--listing-info img{
+    margin-top: 1rem;
     width: 20px;
     height: 20px;
     border-radius:5px;
@@ -405,7 +410,7 @@ video {
 
 .event--listing-img >img{
     width: 300px;
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
 .testimonial--section{
