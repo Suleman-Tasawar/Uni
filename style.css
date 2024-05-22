@@ -6,11 +6,12 @@
     line-height: 1.6;
 }
 :root {
-    --primary-color: #333333; /* Charcoal */
-    --secondary-color: #2E8B57; /* Forest Green */
-    --accent-color: #0099ff; /* Sky Blue */
+    --primary-color: #333333;
+    --secondary-color: #2E8B57;
+    --accent-color: #0099ff; 
     --highlight-color: #FFFF; 
-    --background-color: #D3D3D3; /* Light Gray */
+    --background-color: #D3D3D3; 
+    --dark-blue:  #00243a;;
 }
 
 /*Nav Bar*/
@@ -23,8 +24,10 @@ a{
 }
 
 .nav--bar{
+    background: var(--highlight-color);
     height: 70px;
     position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,26 +73,33 @@ a{
         justify-content: space-between;
     }
     .nav--links{
-        width: 400px;
-        background: var(--highlight-color);
-        color: var(--primary-color);
+        width: 200px;
+        height: 100vh;
+        background: var(--dark-blue);
         display: none;
     }
     .nav--links>ul{
+        padding-right: 2rem;
+        text-align: center;
         position: absolute;
         top: 50%;
         right: 0%;
         left: 80%;
         flex-direction: column;
-        z-index: -1;
+        z-index: 2;
     }
     .line{
         display: none;
     }
-
+    
     .nav--links li{
         margin: 0;
         margin-top: 2rem;
+    }
+    
+    .nav--bar a{
+        
+        color: var(--highlight-color);
     }
     
 }
@@ -109,6 +119,7 @@ a{
 
 /* Video Styles */
 video {
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -184,7 +195,14 @@ video {
     font-size: 20px;
 }
 
-
+.fa--icons{
+    text-align: center;
+}
+.fa--icons>svg{
+    fill: var(--highlight-color);
+    width: 50px;
+    height: 50px;
+}
 
 #about-us > div:nth-of-type(2){
     margin-top: 4rem;
@@ -194,9 +212,10 @@ video {
 }
 
 #about-us > div:nth-of-type(2)>div{
+    text-align: center;
     padding: 1rem;
     width: 250px;
-    height: 150px;
+    height: 200px;
     color: var(--highlight-color);
 }
 
@@ -232,7 +251,7 @@ video {
 .academics--info>h1{
     font-size: 50px;
     font-weight: 900;
-    color: #ed1b2f;
+    color: var(--dark-blue);
 }
 .academics--info>p{
     color: #a7a9ac;
@@ -248,6 +267,13 @@ video {
 .ademics--degree3{
     width: 300px;
     color: var(--primary-color);
+}
+
+.ademics--degree1:hover,
+.ademics--degree2:hover,
+.ademics--degree3:hover{
+    transition: 0.1s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .degree>div{
     padding: 1.5rem;
@@ -299,7 +325,7 @@ video {
 }
 
 .apply-section{
-    background: #00243a;
+    background: var(--dark-blue);
     color: var(--highlight-color);
     height: 300px;
     line-height: 2;
@@ -343,6 +369,43 @@ video {
 .club--img>img{
     width: 100%;
     height: 100%;
+}
+.event--info>h1{
+    font-size: 40px;
+    color: var(--dark-blue);
+    text-align: center;
+}
+
+.events--listing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.event{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event--listing-info{
+    padding: 1rem;
+    width: 300px;
+    background: #f9f9f9;
+    color: var(--dark-blue);
+
+}
+
+.event--listing-info img{
+    width: 20px;
+    height: 20px;
+    border-radius:5px;
+}
+
+.event--listing-img >img{
+    width: 300px;
+    margin-top: 10px;
 }
 
 .testimonial--section{
@@ -388,15 +451,15 @@ video {
 }
 
 footer {
-    background-color: #333333;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--highlight-color);
     padding: 20px 0;
     text-align: center;
     font-size: 14px;
 }
 
 footer a {
-    color: #ffffff;
+    color: var(--highlight-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -412,7 +475,7 @@ footer a:hover {
 .program--info > h1{
     font-weight: 700;
     font-size: 40px;
-    color: #00243a;
+    color: var(--dark-blue);
 }
 .program--info > p{
     font-size: 20px;
@@ -432,7 +495,7 @@ footer a:hover {
 .degree--title{
     margin-top: 0.5rem;
     font-weight: bold;
-    color: #00243a;
+    color: var(--dark-blue);
 }
 .degree--info{
     margin-top: 0.5rem;
